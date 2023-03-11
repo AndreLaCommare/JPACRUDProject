@@ -20,7 +20,7 @@ public class UFCFighterDaoImpl implements UFCFighterDAO {
 	@Override
 	public UFCFighter findById(int id) {
 		// TODO Auto-generated method stub
-		return em.find(UFCFighter.class, 1);
+		return em.find(UFCFighter.class, id);
 	}
 
 	@Override
@@ -46,9 +46,13 @@ public class UFCFighterDaoImpl implements UFCFighterDAO {
 		
 		
 		managed.setName(ufc.getName());
-		managed.setHomeCountry(ufc.getHomeCountry());
 		managed.setWeightClass(ufc.getWeightClass());
+		managed.setHomeCountry(ufc.getHomeCountry());
 		managed.setImageurl(ufc.getImageurl());
+		managed.setStrikeAvg(ufc.getStrikeAvg());
+		managed.setBackground(ufc.getBackground());
+		managed.setLastFight(ufc.getLastFight());
+		managed.setStance(ufc.getStance());
 		
 		
 		return managed;

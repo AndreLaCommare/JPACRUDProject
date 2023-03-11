@@ -1,5 +1,7 @@
 package com.skilldistillery.ufcfighters.entities;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +24,14 @@ public class UFCFighter {
 	private String homeCountry;
 	@Column(name="image_url")
 	private String imageurl;
+	@Column(name="strike_average_per_minute")
+	private double strikeAvg;
+	@Column(name="martial_arts_background")
+	private String background;
+	@Column(name="most_recent_fight")
+	private Date lastFight;
+	private String stance;
+	
 	
 	public UFCFighter() {
 		super();
@@ -57,12 +67,49 @@ public class UFCFighter {
 	public void setImageurl(String imageurl) {
 		this.imageurl = imageurl;
 	}
+	
+	
+
+	public double getStrikeAvg() {
+		return strikeAvg;
+	}
+
+	public void setStrikeAvg(double strikeAvg) {
+		this.strikeAvg = strikeAvg;
+	}
+
+	public String getBackground() {
+		return background;
+	}
+
+	public void setBackground(String background) {
+		this.background = background;
+	}
+
+	public Date getLastFight() {
+		return lastFight;
+	}
+
+	public void setLastFight(Date lastFight) {
+		this.lastFight = lastFight;
+	}
+
+	public String getStance() {
+		return stance;
+	}
+
+	public void setStance(String stance) {
+		this.stance = stance;
+	}
 
 	@Override
 	public String toString() {
 		return "UFCFighter [id=" + id + ", name=" + name + ", weightClass=" + weightClass + ", homeCountry="
-				+ homeCountry + ", imageurl=" + imageurl + "]";
+				+ homeCountry + ", imageurl=" + imageurl + ", strikeAvg=" + strikeAvg + ", background=" + background
+				+ ", lastFight=" + lastFight + ", stance=" + stance + "]";
 	}
+
+	
 	
 	
 	

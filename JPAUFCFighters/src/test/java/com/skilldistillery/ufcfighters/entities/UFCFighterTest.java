@@ -32,7 +32,7 @@ class UFCFighterTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		em  = emf.createEntityManager();
-		fighter = em.find(UFCFighter.class, 1);
+		fighter = em.find(UFCFighter.class, 2);
 	}
 	
 
@@ -45,7 +45,10 @@ class UFCFighterTest {
 	@Test
 	void test_basic_mapping() {
 		assertNotNull(fighter);
-		assertEquals("Alexander Volkanovski", fighter.getName());
+		assertEquals("Khabib Nurmagomedov", fighter.getName());
+		assertEquals(155, fighter.getWeightClass());
+		assertEquals("Orthodox", fighter.getStance());
+		assertEquals("Wrestling", fighter.getBackground());
 	}
 
 }
