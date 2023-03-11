@@ -20,7 +20,9 @@ public class UFCFighterDaoImpl implements UFCFighterDAO {
 	@Override
 	public UFCFighter findById(int id) {
 		// TODO Auto-generated method stub
-		return em.find(UFCFighter.class, id);
+		UFCFighter ufc = em.find(UFCFighter.class, id);
+		System.out.println(ufc);
+		return ufc;
 	}
 
 	@Override

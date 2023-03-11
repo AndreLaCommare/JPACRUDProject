@@ -53,7 +53,7 @@ ${fighter.strikeAvg } ${fighter.background } ${fighter.lastFight } ${fighter.sta
 	Weight Class(lbs.): <input type="text" name="weightClass" /><br>
 	Strike Average: <input type="text" name="strikeAvg" /><br>
 	Martial Arts Background: <input type="text" name="background" /><br>
-	Most Recent Bout: <input type="date" name="lastFight" /><br>
+	Most Recent Bout: <input type="date" name="lastFightAlt" /><br>
 	Stance: <input type="text" name="stance" /><br>
 	<input type="submit"
 			value="Create Fighter" />

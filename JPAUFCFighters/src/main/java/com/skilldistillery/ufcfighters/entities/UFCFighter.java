@@ -1,6 +1,6 @@
 package com.skilldistillery.ufcfighters.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,17 +19,17 @@ public class UFCFighter {
 	
 	private String name;
 	@Column(name="weight_class")
-	private int weightClass;
+	private Integer weightClass;
 	@Column(name="home_country")
 	private String homeCountry;
 	@Column(name="image_url")
 	private String imageurl;
 	@Column(name="strike_average_per_minute")
-	private double strikeAvg;
+	private Double strikeAvg;
 	@Column(name="martial_arts_background")
 	private String background;
 	@Column(name="most_recent_fight")
-	private Date lastFight;
+	private LocalDate lastFight;
 	private String stance;
 	
 	
@@ -49,10 +49,10 @@ public class UFCFighter {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getWeightClass() {
+	public Integer getWeightClass() {
 		return weightClass;
 	}
-	public void setWeightClass(int weightClass) {
+	public void setWeightClass(Integer weightClass) {
 		this.weightClass = weightClass;
 	}
 	public String getHomeCountry() {
@@ -70,11 +70,11 @@ public class UFCFighter {
 	
 	
 
-	public double getStrikeAvg() {
+	public Double getStrikeAvg() {
 		return strikeAvg;
 	}
 
-	public void setStrikeAvg(double strikeAvg) {
+	public void setStrikeAvg(Double strikeAvg) {
 		this.strikeAvg = strikeAvg;
 	}
 
@@ -86,11 +86,11 @@ public class UFCFighter {
 		this.background = background;
 	}
 
-	public Date getLastFight() {
+	public LocalDate getLastFight() {
 		return lastFight;
 	}
 
-	public void setLastFight(Date lastFight) {
+	public void setLastFight(LocalDate lastFight) {
 		this.lastFight = lastFight;
 	}
 
